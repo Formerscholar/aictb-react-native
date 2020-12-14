@@ -15,7 +15,7 @@ function Home(props) {
 
   const gethomeData = async () => {
     const {code, data} = await gethome();
-    console.log(code);
+    alert(code);
     if (code == 200) {
       console.log(data);
       setIndexData(data);
