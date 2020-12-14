@@ -6,7 +6,7 @@ import { gethome } from '../../services/home';
 import Styles from './style'
 
 function Home(props) {
-  const {history, homeInfo, setData} = props;
+  const { history, homeInfo, setData } = props;
   const [indexData, setIndexData] = useState({});
 
   useEffect(() => {
@@ -17,6 +17,7 @@ function Home(props) {
   const gethomeData = async () => {
     const {code, data} = await gethome();
     alert(code);
+
     if (code == 200) {
       console.log(data);
       setIndexData(data);

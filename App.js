@@ -1,7 +1,8 @@
 import React, {memo} from 'react';
-import BaseRoute from './route'
+import BaseRoute from './src/route'
 import { Provider } from 'react-redux'
-import store from './store'
+import store from './src/store'
+
 function App() {
   return (
     <Provider store={store}>

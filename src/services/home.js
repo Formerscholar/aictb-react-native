@@ -1,13 +1,12 @@
-import request from './axios'
-import Qs from 'qs'
+import { request } from './axios';
+import Qs from 'qs';
 
 export function gethome() {
   return request({
     url: '/home',
-    method: 'GET'
-  })
+    method: 'GET',
+  });
 }
-
 
 // export function getTeamDetail(params) {
 //   return request({
@@ -16,8 +15,6 @@ export function gethome() {
 //     params,
 //   })
 // }
-
-
 
 // export function delTeamStudent(data) {
 //   return request({
