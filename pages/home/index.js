@@ -2,7 +2,8 @@ import React, {memo, useEffect, useState} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import {connect} from 'react-redux';
 import {GET_HOME_INFO} from '../../store/actionType';
-import {gethome} from '../../services/home';
+import { gethome } from '../../services/home';
+import Styles from './style'
 
 function Home(props) {
   const {history, homeInfo, setData} = props;
@@ -28,10 +29,10 @@ function Home(props) {
   };
 
   return (
-    <View>
+    <View style={[Styles.view]}>
       <Text>Home</Text>
       <TouchableOpacity onPress={toPagePer}>
-        <Text>toPer</Text>
+        <Text style={[Styles.text]}>toPer</Text>
       </TouchableOpacity>
       <Text>{homeInfo?.test}</Text>
     </View>
