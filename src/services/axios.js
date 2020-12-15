@@ -23,7 +23,8 @@ export function request(option) {
     (response) => {
       const {code} = response.data;
       // if (code === 777) {
-      //   // history.push('/personal');
+      //   let history = useHistory()
+      //   history.push('/personal');
       // }
       return response.data;
     },

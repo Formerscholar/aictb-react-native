@@ -10,6 +10,7 @@ function Home(props) {
   const [indexData, setIndexData] = useState({});
 
   useEffect(() => {
+    console.log(homeInfo);
     gethomeData();
     return () => {};
   }, []);
