@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {GET_HOME_INFO} from '../../store/actionType';
 import { gethome } from '../../services/home';
 import Styles from './style'
+import { Button } from '@ant-design/react-native';
 
 function Home(props) {
   const { history, homeInfo, setData } = props;
@@ -37,6 +38,7 @@ function Home(props) {
         <Text style={[Styles.text]}>toPer</Text>
       </TouchableOpacity>
       <Text>{homeInfo?.test}</Text>
+      <Button type="primary" >Start</Button>
     </View>
   );
 }
