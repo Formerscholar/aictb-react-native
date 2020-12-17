@@ -2,7 +2,6 @@ const brandPrimary = '#E50304';
 const brandPrimaryTap = '#C80304';
 
 export default {
-  // 文字色
   color_text_base: '#000000',                  // 基本
   color_text_base_inverse: '#ffffff',          // 基本 _ 反色
   color_text_secondary: '#a4a9b0',          // 辅助色
@@ -31,7 +30,7 @@ export default {
   brand_warning: '#f4333c',
   brand_error: '#f4333c',
   brand_important: '#ff5b05',  // 用于小红点
-  brand_wait: '#108ee9',
+  brand_wait: brandPrimaryTap,
 
   // 边框色
   border_color_base: '#dddddd',
@@ -104,7 +103,6 @@ export default {
 
   primary_button_fill: brandPrimary,
   primary_button_fill_tap: brandPrimaryTap,
-
   ghost_button_color: brandPrimary,    // 同时应用于背景、文字颜色、边框色
   ghost_button_fill_tap: `${brandPrimary}99`, // alpha 60%  https://codepen.io/chriscoyier/pen/XjbzAW
 

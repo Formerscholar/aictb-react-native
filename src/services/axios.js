@@ -21,9 +21,9 @@ export function request(option) {
 
   instance.interceptors.response.use(
     (response) => {
-      const {code} = response.data;
+      const { code } = response.data;
+      // const history = new createBrowserHistory();
       // if (code === 777) {
-      //   let history = useHistory()
       //   history.push('/personal');
       // }
       return response.data;
