@@ -4,7 +4,9 @@ import {connect} from 'react-redux';
 import {GET_HOME_INFO} from '../../store/actionType';
 import {gethome} from '../../services/home';
 import Styles from './style';
-import { InputItem, List  } from '@ant-design/react-native';
+import { InputItem, List } from '@ant-design/react-native';
+import CoverStyle from '../../assets/style/coverAntdStyle'
+
 
 const tabsText = ['我是学生', '我是老师'];
 
@@ -21,6 +23,10 @@ function Login(props) {
   const tabhandleClick = (idx) => {
     setCurrent(idx);
   };
+
+  const phonrChange = (value) => {
+    setPhone(value)
+  }
 
   return (
     <View style={[Styles.root]}>
@@ -45,14 +51,15 @@ function Login(props) {
           );
         })}
       </View>
-      <List>
+      <List style={[Styles.listbox]} styles={CoverStyle.newListStyle}>
         <InputItem
-          clear
+          style={[Styles.inputStyle]}
+          styles={CoverStyle.newInputStyle}
           type="phone"
           value={phone}
+          onChange={phonrChange}
           placeholder="请输入手机号"
-        >
-        </InputItem>
+        />
       </List>
     </View>
   );

@@ -1,9 +1,9 @@
 import { StyleSheet } from "react-native";
-import {pxToDp} from '../../utils/stylesKits'
+import { pxToDp } from '../../utils/stylesKits'
+
 
 const Styles = StyleSheet.create({
   root: {
-   
   },
   bgimg: {
     width: '100%',
@@ -27,6 +27,18 @@ const Styles = StyleSheet.create({
     fontFamily: 'PingFang SC',
     fontWeight: 'bold',
     color: '#333333'
+  },
+  listbox: {
+    marginTop: pxToDp(62),
+    marginHorizontal: pxToDp(80),
+  },
+  inputStyle: {
+    width: '100%',
+    height: pxToDp(80),
+    backgroundColor: '#F4F4F4',
+    borderRadius: pxToDp(38),
+    paddingLeft: pxToDp(49),
+
   }
 })
 

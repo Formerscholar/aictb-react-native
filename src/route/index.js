@@ -9,6 +9,7 @@ import Personal from '../pages/personal';
 function BaseRoute() {
   return (
     <NativeRouter>
+      
       <Switch>
         <Route path="/login" component={Login} />
         <Route path="/home" component={Home} />
