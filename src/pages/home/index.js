@@ -1,13 +1,13 @@
 import React, {memo, useEffect, useState} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import {connect} from 'react-redux';
-import {GET_HOME_INFO} from '../../store/actionType';
-import { gethome } from '../../services/home';
-import Styles from './style'
-import { Button } from '@ant-design/react-native';
+import {USER_INFO} from '../../store/actionType';
+import {gethome} from '../../services/home';
+import Styles from './style';
+import {Button} from '@ant-design/react-native';
 
 function Home(props) {
-  const { history, homeInfo, setData } = props;
+  const {history, homeInfo, setData} = props;
   const [indexData, setIndexData] = useState({});
 
   useEffect(() => {
@@ -38,14 +38,15 @@ function Home(props) {
         <Text style={[Styles.text]}>toPer</Text>
       </TouchableOpacity>
       <Text>{homeInfo?.test}</Text>
-      <Button type="primary" >Start</Button>
+      <Button type="primary">Start</Button>
     </View>
   );
 }
 
 const mapStateToProps = (state) => {
+  const {userInfo} = state;
   return {
-    homeInfo: state.homeInfo,
+    userInfo,
   };
 };
 
@@ -53,7 +54,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     setData(value) {
       let action = {
-        type: GET_HOME_INFO,
+        type: USER_INFO,
         value: value,
       };
       dispatch(action);

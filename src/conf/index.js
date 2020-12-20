@@ -1,4 +1,4 @@
-const baseURL = 'http://test.aictb.com/teacher'
+const baseURL = 'https://api.aictb.com'
 
 export {
   baseURL

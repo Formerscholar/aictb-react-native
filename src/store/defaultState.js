@@ -1,6 +1,4 @@
 const defaultState = {
-  homeInfo: {
-    test:'123'
-  },
+  userInfo: {},
 }
 export default defaultState

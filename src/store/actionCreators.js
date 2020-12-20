@@ -1,10 +1,10 @@
 import {
-  GET_HOME_INFO,
+  USER_INFO,
 } from './actionType'
 
-export const GetListAction = (value) => {
+export const getUserInfo = (value) => {
   return {
-    type: GET_HOME_INFO,
+    type: USER_INFO,
     value,
   }
 }

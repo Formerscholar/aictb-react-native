@@ -1,2 +1,2 @@
-export const GET_HOME_INFO = 'gethomeinfo'
+export const USER_INFO = 'userInfo'
 
