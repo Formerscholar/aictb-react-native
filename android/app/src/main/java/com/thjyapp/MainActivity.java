@@ -1,4 +1,4 @@
-package com.thjyapp;
+package com.qiji.aictb;
 
 import com.facebook.react.ReactActivity;
 
