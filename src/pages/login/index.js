@@ -8,6 +8,7 @@ import {InputItem, List, Toast} from '@ant-design/react-native';
 import CoverStyle from '../../assets/style/coverAntdStyle';
 import {pxToDp} from '../../utils/stylesKits';
 import LinearGradient from 'react-native-linear-gradient';
+import * as WeChat from 'react-native-wechat-lib';
 
 const tabsText = ['我是学生', '我是老师'];
 
@@ -52,13 +53,20 @@ function Login(props) {
     alert('跳转注册页面' + current);
   };
   const changePassWorld = () => {
-    alert('修改密码页面'+ current);
+    alert('修改密码页面' + current);
   };
-  const wechatLogin = () => {
+
+  const wechatLogin = async () => {
+    const isWx = await WeChat.isWXAppInstalled();
+    if (!isWx) {
+      alert('未安装微信');
+      return
+    }
+    const result = await WeChat.sendAuthRequest('snsapi_userinfo');
     if (!current) {
-      alert('学生微信快捷登录');
+      alert('学生微信快捷登录', result);
     } else {
-      alert('老师微信快捷登录');
+      alert('老师微信快捷登录', result); 
     }
   };
 

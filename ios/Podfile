@@ -10,6 +10,8 @@ target 'thjyApp' do
 
   pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
 
+  pod 'RCTWeChat', :path => '../node_modules/react-native-wechat-lib'
+
   target 'thjyAppTests' do
     inherit! :complete
     # Pods for testing
