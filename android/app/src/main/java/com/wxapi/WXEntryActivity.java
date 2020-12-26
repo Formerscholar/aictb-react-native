@@ -1,4 +1,4 @@
-package your.aictb.wxapi;
+package com.qiji.aictb.wxapi;
 
 import android.app.Activity;
 import android.os.Bundle;
