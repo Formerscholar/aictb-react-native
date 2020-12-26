@@ -62,7 +62,7 @@ function Login(props) {
       alert('未安装微信');
       return
     }
-    const result = await WeChat.sendAuthRequest('snsapi_userinfo');
+    const result = await WeChat.sendAuthRequest('snsapi_userinfo','wechat_sdk_demo');
     if (!current) {
       alert('学生微信快捷登录', result);
     } else {
