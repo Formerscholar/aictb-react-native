@@ -1,8 +1,9 @@
 {
-  "name": "thjyApp",
+  "name": "aictb",
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "android:mobile": "react-native run-android",
     "android": "adb connect 127.0.0.1:62001 && react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",

@@ -8,7 +8,7 @@ import {StatusBar} from 'react-native';
 import * as WeChat from 'react-native-wechat-lib';
 
 function App() {
-  WeChat.registerApp('wx64468960ba0a610e', 'universalLink');
+  WeChat.registerApp('wx64468960ba0a610e', 'https://www.aictb.com/');
 
   return (
     <Providers theme={customTheme}>

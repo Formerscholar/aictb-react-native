@@ -1,4 +1,4 @@
-package your.thjyapp.wxapi;
+package your.aictb.wxapi;
 
 import android.app.Activity;
 import android.os.Bundle;
