@@ -30,7 +30,6 @@ export function WxTeacherLogin(data) {
   })
 }
 
-
 // 学生wx登录
 export function WxStudentLogin(data) {
   return request({
