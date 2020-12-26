@@ -2,7 +2,7 @@ import React, {memo, useEffect, useState} from 'react';
 import {View, Text, TouchableOpacity, Image} from 'react-native';
 import {connect} from 'react-redux';
 import {USER_INFO} from '../../store/actionType';
-import {StudentLogin, teacherLogin} from '../../services/login';
+import {StudentLogin, teacherLogin,WxStudentLogin,WxTeacherLogin} from '../../services/login';
 import Styles from './style';
 import {InputItem, List, Toast} from '@ant-design/react-native';
 import CoverStyle from '../../assets/style/coverAntdStyle';
@@ -41,6 +41,7 @@ function Login(props) {
       setUserInfo(data);
       if (!current) {
         alert('跳转学生首页');
+        
       } else {
         alert('跳转老师首页');
       }
@@ -60,14 +61,25 @@ function Login(props) {
     const isWx = await WeChat.isWXAppInstalled();
     if (!isWx) {
       alert('未安装微信');
-      return
+      return;
     }
-    const result = await WeChat.sendAuthRequest('snsapi_userinfo','wechat_sdk');
-    if (!current) {
-      alert('学生微信快捷登录', result);
-    } else {
-      alert('老师微信快捷登录', result); 
-    }
+    WeChat.sendAuthRequest('snsapi_userinfo', 'wechat_sdk')
+      .then((res) => {
+        console.log('sendAuthRequest',res.code);
+        // if (!current) {
+        //   alert('学生微信快捷登录', result);
+        // } else {
+        //   alert('老师微信快捷登录', result);
+        // }
+      })
+      .catch((err) => {
+        let errorCode = Number(err.code);
+        if (errorCode === -2) {
+          alert('您已取消授权登录')
+        } else {
+          alert('意外取消授权登录')
+        }
+      });
   };
 
   return (

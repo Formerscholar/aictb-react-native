@@ -20,6 +20,26 @@ export function teacherLogin(data) {
   })
 }
 
+
+// 老师wx登录
+export function WxTeacherLogin(data) {
+  return request({
+    url: '/app/teacher/wx_login/',
+    method: 'POST',
+    data: Qs.stringify(data),
+  })
+}
+
+
+// 学生wx登录
+export function WxStudentLogin(data) {
+  return request({
+    url: '/app/user/wx_login/',
+    method: 'POST',
+    data: Qs.stringify(data),
+  })
+}
+
 // export function getTeamDetail(params) {
 //   return request({
 //     url: '/getTeamDetail',
